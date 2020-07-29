@@ -1,0 +1,44 @@
+pragma solidity ^0.4.17 < 0.6.12;
+
+contract ReportCard{
+    string public name;
+    uint public rollno;
+    string public batch;
+    string public status;
+    uint public markssub1;
+    uint public markssub2;
+    uint public markssub3;
+    uint public markssub4;
+    uint public markssub5;
+    
+    function ReportCard(string newName, uint newRollno, string newBatch, string newStatus, uint newMarkssub1, uint newMarkssub2, uint newMarkssub3, uint newMarkssub4, uint newMarkssub5) public {
+        name = newName;
+        rollno = newRollno;
+        batch = newBatch;
+        status = newStatus;
+        markssub1 = newMarkssub1;
+        markssub2 = newMarkssub2;
+        markssub3 = newMarkssub3;
+        markssub4 = newMarkssub4;
+        markssub5 = newMarkssub5;
+    }
+    
+     function setDetails(string newName, uint newRollno, string newBatch, string newStatus, uint newMarkssub1, uint newMarkssub2, uint newMarkssub3, uint newMarkssub4, uint newMarkssub5) public {
+        name = newName;
+        rollno = newRollno;
+        batch = newBatch;
+        status = newStatus;
+        markssub1 = newMarkssub1;
+        markssub2 = newMarkssub2;
+        markssub3 = newMarkssub3;
+        markssub4 = newMarkssub4;
+        markssub5 = newMarkssub5;
+    }
+    function getDetails() public view returns(string, uint,string,string, uint, uint, uint, uint, uint){
+        return (name, rollno, batch, status, markssub1, markssub2, markssub3, markssub4, markssub5);
+    }
+}
+
+
+//link of ropsten:- https://ropsten.etherscan.io/tx/0x9c0013ef60d6fd89589f2bdaaca100825844524d1f6925e34216467d8d54e096
+//adress:- 0x923d4ec877ca8131d8d457bfb08f839acc15f9f7
